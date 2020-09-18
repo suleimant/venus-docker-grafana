@@ -26,6 +26,20 @@ services:
     
 volumes:
  influxdb-storage:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/mnt/user/Appdata/docker/venus/influxdb'
  grafana-storage:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/mnt/user/Appdata/docker/venus/grafana' 
  config-storage:
-
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/mnt/user/Appdata/docker/venus/config'
